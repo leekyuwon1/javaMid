@@ -9,9 +9,9 @@ public class PrimitiveMain {
         System.out.println("a = " + a);
         System.out.println("b = " + b);
 
-        b = 20;
+        b = 20; // b의 값만 "부산"으로 변경할려고 하였으나 a 값도 변경
         System.out.println("20 -> b ");
-        System.out.println("a = " + a);
+        System.out.println("a = " + a); // 사이드 이펙트 발생
         System.out.println("b = " + b);
     }
 }
