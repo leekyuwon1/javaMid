@@ -11,5 +11,8 @@ public class StringImmutable2 {
         // 2. 문자열 풀 : 리터럴을 사용하게 되면 문자열 풀에 할당되어 있어 변경되면 같이 변경된다.
         System.out.println("str1 = " + str1);
         System.out.println("str2 = " + str2);
+
+
+
     }
 }
