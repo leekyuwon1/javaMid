@@ -7,7 +7,6 @@ public class StringGradeEx1_2 {
 
         DiscountService discountService = new DiscountService();
 
-//        discountService.discount()
 
         // 존재하지 않는 등급 ( 잘못된 등급 기입 )
         int vip = discountService.discount("VIP", price);
@@ -22,8 +21,7 @@ public class StringGradeEx1_2 {
         System.out.println("gold 등급의 할인 금액 = " + gold);
 
         /**
-         * * 타입 안정성 부족
-         * * 데이터 일관성 문제
-         * */
+         * 상수를 사용하더라도 다른 개발자가 시그니처만 보고 작성할 가능성이 농후하다.*/
+
     }
 }
