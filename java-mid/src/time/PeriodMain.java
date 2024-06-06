@@ -17,6 +17,9 @@ public class PeriodMain {
         System.out.println("plusDate = " + plusDate);
 
         // 기간 차이
-
+        LocalDate startDate = LocalDate.of(2023, 1, 1);
+        LocalDate endDate = LocalDate.of(2023, 4, 2);
+        Period between = Period.between(startDate, endDate);
+        System.out.println("기간: " + between.getMonths() + "개월 " + between.getDays() + "일");
     }
 }
