@@ -9,7 +9,7 @@ public class Car {
     public Car(String model, int chargeLevel) {
         this.model = model;
         this.chargeLevel = chargeLevel;
-        this.engine = new Engine();
+        this.engine = new Engine(); // 메모리 누수 위험. engine 변수가 암묵적인 참조를 유지하여 가비지 돌지를 못하게함
     }
 
     public void start() {
