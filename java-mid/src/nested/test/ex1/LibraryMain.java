@@ -11,6 +11,6 @@ public class LibraryMain {
         library.addBook("자바 ORM 표준 JPA 프로그래밍", "김영한");
         library.addBook("OneMoreThing", "잡스");
 
-        library.showBook\s(); // 도서관의 모든 도서 정보 출력
+        library.showBooks(); // 도서관의 모든 도서 정보 출력
     }
 }

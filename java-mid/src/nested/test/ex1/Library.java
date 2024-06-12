@@ -2,43 +2,39 @@ package nested.test.ex1;
 
 public class Library {
 
-    private int number;
-    private Book book;
-    private String author;
+    private int size;
+    private Book[] books;
 
-    public Library(int number) {
-        this.number = number;
-        this.book = new Book();
+    public Library(int size) {
+        this.size = 0;
+        this.books = new Book[size];
     }
 
     public void showBooks() {
         System.out.println("== 책 목록 출력 == ");
-        System.out.println("도서 제목: " + book.title + ", 저자: " + book.author);
-    }
-
-    public void addBook(String book, String author) {
-//        class Book{
-//            public String title;
-//            public String author;
-//
-//            String[] books;
-//        }
-        Book[] books;
-
-        for (int i = 0; i < number; i++) {
-            books = new Book[number];
-            books[i].title = book;
-            books[i].author = book;
-
-            if (number) {
-                System.out.println("도서관 저장 공간이 부족합니다.");
-            }
+        for (int i = 0; i < size; i++) {
+            System.out.println("도서 제목: " + books[i].title + ", 저자: " + books[i].author);
         }
     }
 
-     class Book{
+    public void addBook(String title, String author) {
+        // 검증 로직을 다 처리하고
+        if(size >= books.length) {
+            System.out.println("도서관 저장 공간이 부족합니다.");
+            return;
+        }
+        // 정상 로직을 처리
+        books[size++] = new Book(title, author);
+    }
+
+     private static class Book{
         private String title;
         private String author;
 
-    }
+        public Book(String title, String author) {
+            this.title = title;
+            this.author = author;
+        }
+
+     }
 }
